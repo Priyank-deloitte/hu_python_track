@@ -1,17 +1,18 @@
-class StringClass:
-    def __init__(self):
-        self.str1=""
+import ClassString
+import Pairs
+import SearchElement
+import equalSumPair
 
-    def get_string(self):
-        self.str1 = input("Enter the String :")
+if __name__ == '__main__':
+    stringClassobj = ClassString.StringClass
+    stringClassobj.LengthOfString("12345678")
+    stringClassobj.ListOfChar("12345678")
 
-    def LengthOfString(self):
-        return len(self.str1)
+    pairObj = Pairs.PairsPossible
+    pairObj.pairs("13246587")
 
-    def StringToList(self):
-        return list(self.str1)
+    commonEleObj = SearchElement.searchCommonElement
+    commonEleObj.commonElement("12345678", "13246587")
 
-str1 = StringClass()
-str1.get_string()
-print(str1.LengthOfString())
-print(str1.StringToList())
+    equalSumPairObj = equalSumPair.EqualSumPairs
+    equalSumPairObj.equal_Sum("1212")
