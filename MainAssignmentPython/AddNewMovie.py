@@ -17,24 +17,23 @@ def addMovie():
     gap = input("Gap Between Shows : ")
     capacity = input("Capacity : ")
 
-    movieList.append(title)
-    movieList.append(genre)
-    movieList.append(length)
-    movieList.append(cast)
-    movieList.append(director)
-    movieList.append(adminRating)
-    movieList.append(language)
-    movieList.append(timings)
-    movieList.append(numOfShows)
-    movieList.append(firstShow)
-    movieList.append(intervalTime)
-    movieList.append(gap)
-    movieList.append(capacity)
+    movieList = [title,
+                 genre,
+                 length,
+                 cast,
+                 director,
+                 adminRating,
+                 language,
+                 timings,
+                 numOfShows,
+                 firstShow,
+                 intervalTime,
+                 gap,
+                 capacity]
 
-    with open("MovieDetails.csv", 'a', encoding='UTF8', newline='') as movieDetails:
+    with open("MovieDetails.csv", 'a', encoding='UTF8', newline='\n') as movieDetails:
         writer = csv.writer(movieDetails)
         writer.writerow(movieList)
-        writer.writerow("\n")
 
 
 

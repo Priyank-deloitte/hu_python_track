@@ -14,7 +14,7 @@ class Error(Exception):
     pass
 
 
-class NoDataFound:
+class NoDataFound(Error):
     pass
 
 

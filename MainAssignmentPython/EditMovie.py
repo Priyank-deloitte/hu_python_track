@@ -1,9 +1,4 @@
-import csv
-
 import pandas as pd
-
-
-
 
 class Edit:
     pass
@@ -11,9 +6,7 @@ class Edit:
 
 def editMovie():
     movieName = input("Enter movie name which has to be updated : ")
-    df = pd.read_csv('MovieDetails.csv')
-    df.set_index("Title", inplace=True)
-    df.loc[movieName]
+
 
     while True:
         print("1. Title")
@@ -35,123 +28,106 @@ def editMovie():
 
         if choice == 1:
             newMovieName = input("Enter new movie name : ")
-            with open('MovieDetails.csv') as movieDetails:
-                read = csv.DictReader(movieDetails)
-                for row in read:
-                    if row['Title'] == movieName:
-                        row['Title']== newMovieName
-                        break
+            df = pd.read_csv('MovieDetails.csv')
+            df.loc[df['Title'] == movieName, 'Title'] = newMovieName
+            df.to_csv('MovieDetails.csv', index=False)
+            print(df)
+
 
         elif choice == 2:
             newGenre = input("Enter New Genre : ")
-            with open('MovieDetails.csv') as movieDetails:
-                read = csv.DictReader(movieDetails)
-                for row in read:
-                    if row['Title'] == movieName:
-                        row['Genre'] == newGenre
-                        break
+            df = pd.read_csv('MovieDetails.csv')
+            df.loc[df['Title'] == movieName, 'Genre'] = newGenre
+            df.to_csv('MovieDetails.csv', index=False)
+            print(df)
 
         elif choice == 3:
             newLength = input("Enter New Length : ")
-            with open('MovieDetails.csv') as movieDetails:
-                read = csv.DictReader(movieDetails)
-                for row in read:
-                    if row['Title'] == movieName:
-                        row['Length'] == newLength
-                        break
+            df = pd.read_csv('MovieDetails.csv')
+            df.loc[df['Title'] == movieName, 'Length'] = newLength
+            df.to_csv('MovieDetails.csv', index=False)
+            print(df)
 
         elif choice == 4:
             newCast = input("Enter New Cast : ")
-            with open('MovieDetails.csv') as movieDetails:
-                read = csv.DictReader(movieDetails)
-                for row in read:
-                    if row['Title'] == movieName:
-                        row['Cast'] == newCast
-                        break
+            df = pd.read_csv('MovieDetails.csv')
+            df.loc[df['Title'] == movieName, 'Cast'] = newCast
+            df.to_csv('MovieDetails.csv', index=False)
+            print(df)
 
         elif choice == 5:
             newDir = input("Enter New Director : ")
-            with open('MovieDetails.csv') as movieDetails:
-                read = csv.DictReader(movieDetails)
-                for row in read:
-                    if row['Title'] == movieName:
-                        row['Director'] == newDir
-                        break
+            df = pd.read_csv('MovieDetails.csv')
+            df.loc[df['Title'] == movieName, 'Director'] = newDir
+            df.to_csv('MovieDetails.csv', index=False)
+            print(df)
 
         elif choice == 6:
             newAdminRating = input("Enter New Rating : ")
-            with open('MovieDetails.csv') as movieDetails:
-                read = csv.DictReader(movieDetails)
-                for row in read:
-                    if row['Title'] == movieName:
-                        row['Admin Rating'] == newAdminRating
-                        break
+            df = pd.read_csv('MovieDetails.csv')
+            df.loc[df['Title'] == movieName, 'Admin Rating'] = newAdminRating
+            df.to_csv('MovieDetails.csv', index=False)
+            print(df)
 
         elif choice == 7:
             newLanguage = input("Enter New Language : ")
-            with open('MovieDetails.csv') as movieDetails:
-                read = csv.DictReader(movieDetails)
-                for row in read:
-                    if row['Title'] == movieName:
-                        row['Language'] == newLanguage
-                        break
+            df = pd.read_csv('MovieDetails.csv')
+            df.loc[df['Title'] == movieName, 'Language'] = newLanguage
+            df.to_csv('MovieDetails.csv', index=False)
+            print(df)
 
         elif choice == 8:
             newTiming = input("Enter New Timing : ")
-            with open('MovieDetails.csv') as movieDetails:
-                read = csv.DictReader(movieDetails)
-                for row in read:
-                    if row['Title'] == movieName:
-                        row['Timings'] == newTiming
-                        break
+            df = pd.read_csv('MovieDetails.csv')
+            df.loc[df['Title'] == movieName, 'Timings'] = newTiming
+            df.to_csv('MovieDetails.csv', index=False)
+            print(df)
 
         elif choice == 9:
             newNum = input("Enter Number of Shows : ")
-            with open('MovieDetails.csv') as movieDetails:
-                read = csv.DictReader(movieDetails)
-                for row in read:
-                    if row['Title'] == movieName:
-                        row['Number of Shows'] == newNum
-                        break
+            df = pd.read_csv('MovieDetails.csv')
+            df.loc[df['Title'] == movieName, 'Number of Shows'] = newNum
+            df.to_csv('MovieDetails.csv', index=False)
+            print(df)
 
         elif choice == 10:
             newFirstShow = input("Enter New time of the First Show : ")
-            with open('MovieDetails.csv') as movieDetails:
-                read = csv.DictReader(movieDetails)
-                for row in read:
-                    if row['Title'] == movieName:
-                        row['First Show'] == newFirstShow
-                        break
+            df = pd.read_csv('MovieDetails.csv')
+            df.loc[df['Title'] == movieName, 'First Show'] = newFirstShow
+            df.to_csv('MovieDetails.csv', index=False)
+            print(df)
 
         elif choice == 11:
             newIntervalTime = input("Enter New Interval Time : ")
-            with open('MovieDetails.csv') as movieDetails:
-                read = csv.DictReader(movieDetails)
-                for row in read:
-                    if row['Title'] == movieName:
-                        row['Interval Time'] == newIntervalTime
-                        break
+            df = pd.read_csv('MovieDetails.csv')
+            df.loc[df['Title'] == movieName, 'Interval Time'] = newIntervalTime
+            df.to_csv('MovieDetails.csv', index=False)
+            print(df)
 
         elif choice == 12:
             newGap = input("Enter New Gap time : ")
-            with open('MovieDetails.csv') as movieDetails:
-                read = csv.DictReader(movieDetails)
-                for row in read:
-                    if row['Title'] == movieName:
-                        row['Gap Between Shows'] == newGap
-                        break
+            df = pd.read_csv('MovieDetails.csv')
+            df.loc[df['Title'] == movieName, 'Gap Between Shows'] = newGap
+            df.to_csv('MovieDetails.csv', index=False)
+            print(df)
 
         elif choice == 13:
             newCapacity = input("Enter New Capacity : ")
-            with open('MovieDetails.csv') as movieDetails:
-                read = csv.DictReader(movieDetails)
-                for row in read:
-                    if row['Title'] == movieName:
-                        row['Capacity'] == newCapacity
-                        break
+            df = pd.read_csv('MovieDetails.csv')
+            df.loc[df['Title'] == movieName, 'Capacity'] = newCapacity
+            df.to_csv('MovieDetails.csv', index=False)
+            print(df)
 
         elif choice == 14:
             break
 
         else:
             print("Enter a valid Choice!")
+            break
+
+        print("Updated Successfully!!")
+
+
+
+
+

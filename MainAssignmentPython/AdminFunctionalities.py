@@ -55,7 +55,7 @@ def adminWork():
                 value = len(list(readFile))
                 if value > 1:
                     deleteMovieObj = DeleteMovie
-                    deleteMovieObj.deleteMovie()
+                    deleteMovieObj.delete()
                 else:
                     raise No_Movies
 
